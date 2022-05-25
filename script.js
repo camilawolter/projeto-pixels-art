@@ -22,7 +22,7 @@ function selecionaCor(evento) {
     selecionada.classList.remove('selected');
     evento.target.classList.add('selected');
   }
-                                                      // Referência:forEach - https://blog.betrybe.com/javascript/javascript-foreach/
+// Referência:forEach - https://blog.betrybe.com/javascript/javascript-foreach/
   corPaleta.forEach(function(evento){
     evento.addEventListener('click', selecionaCor)
 });
@@ -33,11 +33,22 @@ function selecionaPinta() {
     for (let index = 0; index < pixel.length; index += 1) {
         pixel[index].addEventListener('click', function(evento) {
             const qualSelecionado = document.querySelector('.selected');
-                                                                          //Referências: .getComputedStyle - https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue 
-                                                                          //.getPropertyValue -  https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
+//Referências: .getComputedStyle - https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue .getPropertyValue -  https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
             const corSelecionadaEAplicando = window.getComputedStyle(qualSelecionado, null).getPropertyValue('background-color');
             evento.target.style.backgroundColor = corSelecionadaEAplicando;
         })
     }
 }
 selecionaPinta();
+
+//Cria botão que limpa os quadrados preenchidos
+function limparBotao() {
+    const pixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+        if (pixel[index] !== 'white') {
+            pixel[index].style.backgroundColor = 'white';
+        }
+    }
+    document.getElementById('clear-board').addEventListener('click', limparBotao);
+}
+limparBotao();
