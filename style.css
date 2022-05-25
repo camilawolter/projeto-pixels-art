@@ -8,6 +8,11 @@
     background-color: black;
 }
 
+#pixel-board {
+    display: table;
+    border: 3px solid black;
+}
+
 .pixel {
     display: table-cell;
     border: 1px solid black;
