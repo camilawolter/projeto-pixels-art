@@ -1,12 +1,19 @@
 //Adicionando cores na paleta
+function coresAleatorias() {
+    let r = Math.random() * 255;
+    let g = Math.random() * 255;
+    let b = Math.random() * 255;
+
 const corDois = document.getElementsByClassName('color')[1];
-corDois.style.backgroundColor = 'rgb(46, 59, 89)';
+corDois.style.backgroundColor = `rgb(${g},${b},${r})`;
 
 const corTres = document.getElementsByClassName('color')[2];
-corTres.style.backgroundColor = 'rgb(242, 192, 109)';
+corTres.style.backgroundColor = `rgb(${r},${b},${g})`;
 
 const corQuatro = document.getElementsByClassName('color')[3];
-corQuatro.style.backgroundColor = 'rgb(97, 95, 95)';
+corQuatro.style.backgroundColor = `rgb(${b},${g},${r})`;
+}
+coresAleatorias();
 
 //Criando pixel board a partir de um determinado n
 function criandoPixelBoard(num = 5) {

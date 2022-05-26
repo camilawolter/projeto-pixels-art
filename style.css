@@ -6,7 +6,7 @@
 
 .gradient {
     height: 100vh;
-    background: linear-gradient(45deg, #000000, #14213D, #FCA311, #E5E5E5, #ffffff);  
+    background: linear-gradient(45deg, #424242, #9c9da0, #bae5d8, #E5E5E5, #ffffff);  
 }
 
 
@@ -47,7 +47,7 @@
 button {
     margin-top: 20px;
     cursor: pointer;
-    box-shadow:  4px 8px 0 rgba(189, 182, 182, 0.521), 0 6px 20px 0 rgba(0, 0, 0, 0.637);
+    box-shadow:  2px 2px 0 rgba(189, 182, 182, 0.521), 0 6px 20px 0 rgba(0, 0, 0, 0.637);
 }
 
 #clear-board {
