@@ -8,6 +8,24 @@ corTres.style.backgroundColor = 'rgb(242, 192, 109)';
 const corQuatro = document.getElementsByClassName('color')[3];
 corQuatro.style.backgroundColor = 'rgb(97, 95, 95)';
 
+//Criando pixel board a partir de um determinado n
+function criandoPixelBoard(num = 5) {
+    const pixelBoard = document.querySelector('#pixel-board');
+
+    for (let index = 0; index < num; index += 1) {
+        const criandoQuadrado = document.createElement('div');
+        criandoQuadrado.classList.add('divPixel');
+        pixelBoard.appendChild(criandoQuadrado);
+
+        for (let index2 = 0; index2 < num; index2 += 1) {
+            const criandoPixel = document.createElement('div');
+            criandoPixel.classList.add('pixel');
+            criandoQuadrado.appendChild(criandoPixel);
+        }
+    }
+}
+criandoPixelBoard();
+
 //Selecionando a cor incial
 function corSelecionada() {
     let corUm = document.querySelector('.color');
@@ -52,3 +70,35 @@ function limparBotao() {
     document.getElementById('clear-board').addEventListener('click', limparBotao);
 }
 limparBotao();
+
+
+//Tamanho defino pelo usuário
+function definindoBoard(num) {
+    if (num < 5) {
+        return 5;
+    }
+    if (num > 50) {
+        return 50;
+    }
+    return num;
+}
+definindoBoard();
+
+function tamanhoBoard() {
+    const input =  document.querySelector('#board-size');
+    const buttonVQV = document.querySelector('#generate-board');
+    const pixelBoard = document.querySelector('#pixel-board');
+
+    buttonVQV.addEventListener('click', function() {
+        if (input.value === '') {
+            alert('Board inválido!');
+        } else {
+            pixelBoard.innerHTML = '';
+            const number = input.value;
+            const novoNum = definindoBoard(number);
+            criandoPixelBoard(novoNum);
+            input.value = '';
+        }
+    })
+}
+tamanhoBoard();
