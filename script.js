@@ -1,12 +1,12 @@
 //Adicionando cores na paleta
 const corDois = document.getElementsByClassName('color')[1];
-corDois.style.backgroundColor = 'pink';
+corDois.style.backgroundColor = 'rgb(46, 59, 89)';
 
 const corTres = document.getElementsByClassName('color')[2];
-corTres.style.backgroundColor = 'green';
+corTres.style.backgroundColor = 'rgb(242, 192, 109)';
 
 const corQuatro = document.getElementsByClassName('color')[3];
-corQuatro.style.backgroundColor = 'yellow';
+corQuatro.style.backgroundColor = 'rgb(97, 95, 95)';
 
 //Selecionando a cor incial
 function corSelecionada() {

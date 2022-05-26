@@ -1,20 +1,39 @@
 * {
     text-align: center;
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 30px;
 }
+
+.gradient {
+    height: 100vh;
+    background: linear-gradient(45deg, #000000, #14213D, #FCA311, #E5E5E5, #ffffff);  
+}
+
+
 .color {
     border: 1px solid black;
     width: 45px;
     height: 45px;
-    border-radius: 100%;
+    border-radius: 10px;
     display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 3px 3px 3px rgb(92, 77, 86);
     background-color: black;
+    cursor: pointer;
 }
 
 #pixel-board {
     display: table;
     border: 3px solid black;
     margin-top: 20px;
+    padding: 5px;
+    position: absolute;
+    margin-top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(129, 127, 129);
+    padding: 5px;
+    box-shadow: 5px 5px 5px rgb(216, 207, 210);
+    cursor: pointer;
 }
 
 .pixel {
@@ -27,9 +46,12 @@
 
 button {
     margin-top: 20px;
+    cursor: pointer;
+    box-shadow:  4px 8px 0 rgba(189, 182, 182, 0.521), 0 6px 20px 0 rgba(0, 0, 0, 0.637);
 }
 
 #clear-board {
+    font-size: 20px;
     margin-bottom: 5px;
     border-radius: 10px;
     border: 2px solid gray;
