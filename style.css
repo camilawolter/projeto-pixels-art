@@ -2,6 +2,7 @@
     text-align: center;
     font-family: 'DotGothic16', sans-serif;
     font-size: 30px;
+    margin: 0;
 }
 
 .gradient {
@@ -24,10 +25,9 @@
 #pixel-board {
     display: table;
     border: 3px solid black;
-    margin-top: 20px;
     padding: 5px;
     position: absolute;
-    margin-top: 3%;
+    margin-top: 5px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgb(129, 127, 129);
@@ -45,7 +45,7 @@
 }
 
 button {
-    margin-top: 20px;
+    margin-top: 15px;
     cursor: pointer;
     box-shadow:  2px 2px 0 rgba(189, 182, 182, 0.521), 0 6px 20px 0 rgba(0, 0, 0, 0.637);
 }
